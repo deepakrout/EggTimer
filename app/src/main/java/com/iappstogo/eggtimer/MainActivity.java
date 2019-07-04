@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Method to reset timer
     private void resetTimer() {
         timerTextView.setText("00:30");
         timerSeekBar.setProgress(30);
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //Update timer method
     public void updateTimer(int secondsLeft) {
         int minutes = secondsLeft / 60;
         int seconds = secondsLeft - (minutes * 60);
