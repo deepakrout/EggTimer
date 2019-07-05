@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onFinish() {
                             Log.i("Timer", "Timer Done");
+                            //Blow the hosr when the times is finished
                             MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.firetruckair);
                             mPlayer.start();
                             resetTimer();
@@ -93,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         timerSeekBar.setMax(600);
         timerSeekBar.setProgress(30);
 
+        // Setup timer listner
         timerSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
